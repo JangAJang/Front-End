@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>선택자 다루기</title>
+        <style> /*여러 선택자를 복합적으로 쓸 수 있다.*/
+            *{ /*전체 선택자*/
+                color:black;
+            }
+            .box h1{ /*태그 선택자, 복수 선택 가능(a, b). 띄어쓰기를 통해 하위 선택자또한 가능하다. */
+                color:red;
+            }
+            #existance{ /*id선택자*/
+                color:blue;
+            }
+            .dt{
+                color:yellow;
+            }
+            .lists{ /*클래스 선택자*/
+                color:purple;
+            }
+            [class='red']{ /*[]안에 속성을 넣어 속성 선택자로 사용할 수 있다. */
+                color:red;
+            }
+            div>h1{ /*>를 이용해서 자식 선택자를 따로 지정 가능하다. */
+                color:aqua;
+            }
+            h2+h3{ /*인전 형제 선택자. 한 태그만 적용됨*/
+                color:gray;
+            }
+            h3~h4{ /*일반 형제 선택자. 뒤에 적혀있는 태그는 모두 적용*/
+                color:white;
+            }
+            a::before{ /*가상 선택자*/
+                content: 'start';
+            }
+            a::after{ /*가상 선택자*/
+                content:'test';
+            }
+            a:visited{ /*링크가 사용되면 적용된다. */
+                color:aquamarine;
+            }
+            a:active{ /*링크가 선택되면 적용된다. */
+                color:red;
+            }
+            textarea:focus{ /*선택되어져있을 때 적용된다. */
+                color:orange;
+            }
+            input:checked + label{
+                color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>h1 tag</h1>
+            <div class="box">
+                <h1>h1 tag</h1>
+            </div>
+        </div>
+        <h1>h1 tag</h1>
+        <p id="existance">p tag</p>
+        <dl >
+            <dt class="lists dt">css</dt> <!--클래스 2중으로 가능하다. -->
+            <dd class="dt">Css = cascade style sheets</dd>
+        </dl>
+        <h2>h2 tag</h2>
+        <h3>h3 tag</h3>
+        <h3>h3 tag</h3>
+        <h3>h3 tag</h3>
+        <h4>h4 tag</h4>
+        <h4>h4 tag</h4>
+        <h4>h4 tag</h4>
+        <a href="#"> link </a>
+        <textarea></textarea>
+        <input type="checkbox" checked>
+        <label>성별</label>
+    </body>
+</html>
