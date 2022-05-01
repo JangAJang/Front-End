@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>레이아웃 설명</title>
+    </head>
+    <body>
+
+        <header></header> <!--페이지의 최상단 부분-->
+        <nav></nav> <!--다른 링크를 연결할 떄 자주 쓰이는 부분-->
+        <section>
+            <h2></h2>
+        </section> 
+        <!--웹페이지에서 논리적으로 관련된 내용, 영역에 쓰임. h(n)태그 중 하나가 자주 쓰인다. -->
+        <article></article> <!--section과 비슷하지만, 독립적으로 영역 구분할 때 자주 쓰인다. -->
+        <aside></aside> <!--사이트의 죄우측에 있는 부분-->
+        <footer></footer> <!--마지막 부분-->
+        <main></main> <!--헤드와 풋 사이의 기본적인 부분-->
+    </body>
+    </body>
+</html>
