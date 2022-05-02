@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>애니메이션 속성</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: bgChange;
+                animation-duration: 10s;
+                animation-delay: 2s;
+                animation-fill-mode:both; 
+                /*
+                none : 원래의 스타일을 가지고 있다가 끝나면 원래대로 돌아온다.
+                forwards : 종료 직전의 상태를 유지한다. 
+                backwards : 0%에서 대기하다가 시작해서 기본세팅으로 끝난다.
+                both : forward와 backwards를 적절히 섞어서 된다. 0%에서 시작해 100%에서 끝난다. 
+                forwards를 제일 많이 쓴다. 
+                 */
+                animation-iteration-count: 3;/*반복횟수 설정*/
+                animation-play-state: running;/*실행 상태 설정가능*/
+                animation-direction: normal;
+                /*
+                애니메이션 진행 방향 설정
+                normal:순방향으로 진행
+                reverse:역박향으로 진행
+                alternativ : 홀수=순방향, 짝수=역방향
+                alternative-reverse : 그 반대
+                ease : 계속 이어서
+                */
+            }
+
+            .box:hover{
+                animation-play-state: paused;
+            }
+
+            @keyframes bgChange {
+                0%{ /*from이라고 써도 똑같다. */
+                    background-color: blue;
+                }
+                25%{
+                    background-color: aqua;
+                }
+                50%{
+                    background-color: white;
+                }
+                75%{
+                    background-color: yellow;
+                }
+                100%{/*to라고 써도 똑같다. */
+                    background-color:orange;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+    </body>
+</html>
