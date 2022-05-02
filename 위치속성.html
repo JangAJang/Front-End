@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title></title>
+        <style>
+            body{
+                height:5000px;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+            }
+            .red{
+                background-color: red;
+                position:fixed; /*페이지가 움직여도 해당 위치에 고정시킨다. */
+            }
+            .green{
+                background-color: green;
+                position: absolute; /*독립 개체로 인식한다. 다른 태그들과 독립적으로 움직인다.*/
+                right: 200px;
+                bottom: 50px;
+            }
+            .blue{
+                background-color: blue;
+                position:relative; /*다른 태그들에 상대적으로 움직인다. */
+                left: 100px;
+            }
+            .yellow{
+                background-color: yellow;
+                position:sticky; /*sticky로 설정하면 스크롤해서 해당 위치로 갔을 때 
+                거기서 더 움직이지 않는다. */
+                top:0px;
+                left:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box red">  </div>
+            <div class="box green">  </div>
+            <div class="box blue">  </div>
+            <div class="box yellow"></div>
+        </div>
+    </body>
+</html>
