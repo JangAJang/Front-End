@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>변형 효과</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transform: translateX(100px); /*translate=이동*/
+                transform: translateY(100px);
+                margin: 100px auto;
+                transform: translate(100px, 100px); /*x, y축으로 이동하는 값 작성*/
+                /*변형의 종류는 다양하다. x, y로 작성된건 2d, 그 외에는 3d로 작동된다. */
+            }
+            .box:hover{
+                transform: scale(2); /*몇배로 만들지, x나 y를 쓰면 그 값만, 아니면 전부*/
+                transform:skewX(30deg); 
+                /*skew는 x, y중 하나로 혹은 전부로 하는 것으로, 몇도로 비틀지 정하는 것*/
+                transform:rotate(60deg); /*x, y축으로 어떻게 회전시킬 지 정한다.*/
+                transform-origin: top left; /*회전, 이동 등의 기준 위치를 변경해준다. */
+                /*position:absolute;
+                left: 50%;
+                top: 50%; 이렇게 하면 도형의 기준점을 중앙으로 옮길 수 있다. 
+                transform:translate(-50%, -50%);*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

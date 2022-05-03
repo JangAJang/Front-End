@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>웹 폰트와 아이콘 폰트</title>
+        <style> 
+        /*
+        fonts.google.com에서 폰트를 찾아서 쓸 수 있음. 
+        사용하고 싶은 폰트를 장바구니에 담고, 이를 웹 폰트로 사용할 수 있다. 
+        link 태그, 혹은 import구문으로 넣을 수 있다. 
+        */
+        .no1{
+            font-family: 'Poppins', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        .no2{
+            font-family: 'Roboto', sans-serif;
+        }
+        </style>
+        <!--링크 방식으로 폰트 적용상태. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--
+        fontawesome.com에서 폰트를 링크로 가져와 사용할 수 있따. 아이콘 링크를 해당 사이트에서 복사해서 쓴다.
+        아이콘은 fontawesome.com에서 복사해오고, 링크 태그는 cdnjs.com에서 가져온다.  
+    -->
+    </head>
+    <body>
+        <p class="no1">Can I lay by your side? Next to you, to you <br>
+            And make sure you're alright <br>
+            I'll take care of you <br>
+            And I don't want to be here if I can't be with you tonight
+        </p>
+        <p class="no2">Can I lay by your side? Next to you, to you <br>
+            And make sure you're alright <br>
+            I'll take care of you <br>
+            And I don't want to be here if I can't be with you tonight
+        </p>
+        <i class="fa-brands fa-airbnb"></i>
+            
+    </body>
+</html>

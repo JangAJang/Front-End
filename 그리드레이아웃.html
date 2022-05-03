@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>그리드 레이아웃</title>
+        <style>
+            .container{
+                color:white;
+                background-color: aliceblue;
+                padding: 1rem;
+                height: 400px;
+                display:grid; 
+                /*각각의 그리드 아이템들이 그리드 컨테이너를 채운다. */
+                grid-template-columns:repeat(2, minmax(100px, 1fr)); /*그리드의 열 정의, fr:균등하게*/
+                grid-template-rows: repeat(2, 1fr); /*그리드의 행 정의*/
+                row-gap: 10px; /*행간의 간격 설정. IE에선 적용안됨.*/
+                column-gap: 10px;
+                align-items: center; /*레이아웃에서 쓴 것 과 동일*/
+                justify-items: center;/*레이아웃에서 쓴 것 과 동일, self로 아이템에 개별 설정 가능*/
+                place-items: end start;/*아이템들 위치, self쓰면 따로 가능*/
+                grid-template-areas: 
+                'A C'
+                'D B'
+                ; /*그리드용 배치, 아이템들에 grid-area 설정해야함*/
+                /*
+                grid-column-start와 grid-column-end, 
+                gird-row-start와 grid-row-end를 통해 그리드의 넘버로 위치 조정 가능
+                */
+            }
+
+            .box{
+                background-color: red;
+                color:black;
+                grid-area: A;
+            }
+            .box:nth-child(2){
+                background-color: orange;
+                grid-area: B;
+            }
+            .box:nth-child(3){
+                background-color: yellow;
+                grid-area: C;
+            }
+            .box:nth-child(4){
+                background-color: green;
+                grid-area: D;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+        </div>
+    </body>
+</html>

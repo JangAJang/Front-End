@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>문서 객체 모델 이해하기</title>
+    </head>
+    <body>
+        <h1 id="h1">Hello <span style="display:none">Javascript!</span></h1>
+        <a id="a" href="https://google.com">googling</a>
+        <script>
+            const pEl = document.getElementsByTagName("h1")[0];
+            //console.log(pEl.textContent);
+            //console.log(pEl.innerText);
+            //console.log(pEl.innerHTML);
+            pEl.textContent="hello. new Content!!! ";
+            pEl.innerText="HELLO GUYS ";
+            pEl.innerHTML="WHAT'S UP!! ";
+            /*innerHTML은 태그를 체로 움직인다. 
+            태그를 같이 입력시키면, 태그가 적용된 상태로 변경된다. 
+            textContent, innerText는 텍스트만 넣는 것 이므로
+            입력시킨 태그들도 입력된 텍스트로 인식한다. */
+            pEl.textContent+="This is Janghee Speaking!!! ";
+            pEl.innerText+="This is Janghee Speaking!!! ";
+            //innerText에서는 앞의 여백을 인식하지 못한다. 
+            pEl.style.color='red'; //이러한 방식으로 css를 자바스크립트로 이용할 수 있다. 
+            pEl.style.backgroundColor='yellow';
+        </script>
+    </body>
+</html>
