@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>노드 추가, 삭제하기</title>
+    </head>
+    <body>
+        <h1 >text H1</h1>
+        <script>
+            const aEl = document.createElement("a");
+            const textNode = document.createTextNode("링크");
+            aEl.appendChild(textNode);
+            const hrefAttr = document.createAttribute("href");
+            hrefAttr.value="https://www.google.com";
+            aEl.setAttributeNode(hrefAttr);
+            document.body.appendChild(aEl);
+
+            const hEl = document.querySelector("h1");
+            hEl.parentNode.removeChild(hEl);
+            
+        </script>
+        
+    </body>
+</html>

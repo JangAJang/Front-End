@@ -13,7 +13,11 @@
         <p id="text">text</p>
         <script>
             const pEL = document.querySelector("#text");
-            pEl.classList.add("styleSet1");
+            pEl.classList.add("styleSet1"); //스타일 추가하기
+            pEl.classList.remove("styleSet1"); //스타일 삭제하기. 삭제해도 클래스가 완전히 삭제되는 것은 아니다.
+            setInterval(()=>{
+                pEl.classList.toggle("styleSet1");
+            }, 1000); 
         </script>
     </body>
 </html>

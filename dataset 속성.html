@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>dataset 속성</title>
+    </head>
+    <body>
+        <button data-snt="10">가방 구매</button>
+        <button data-snt="0">신발 구매</button>
+        <script>
+            const buttonEls = document.querySelectorAll("button");
+            buttonEls.forEach((el)=>{
+                console.log(el.dataset.snt);
+            })
+        </script>
+        <a href="https://google.com">사이트 이동</a>
+        <script>
+            const aEl = document.querySelector("a");
+            aEl.setAttribute("href", "https://naver.com"); 
+            // ~.classList.add와 동일하다. add는 기존속성에 추가로 속성을 넣는 것이며, set은 기존값 대신에 새로운 값을 할당시킨다. 
+            aEl.removeAttribute("href"); 
+        </script>
+    </body>
+</html>
