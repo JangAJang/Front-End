@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <title>체크박스 다루기</title>
+    </head>
+    <body>
+        <forms>
+            <label><input type="checkbox" value="apple">사과</label>
+            <label><input type="checkbox" value="banana" checked>바나나</label>
+            <label><input type="checkbox" value="orange">오렌지</label>
+            <label><input type="checkbox" value="melon" checked>멜론</label>
+        </forms>
+        <script>
+            const input = document.querySelectorAll("input[type='checkbox']");
+            input.forEach((el)=>{
+                if(el.checked) console.log(el.value); /*체크되었을 때 value 출력*/
+            })
+        </script>
+    </body>
+</html>

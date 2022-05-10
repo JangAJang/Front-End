@@ -4,19 +4,21 @@
         <title>forms</title>
     </head>
     <body>
-        <form>
+        <form name="form1">
             <input type="text">
         </form>
-        <form>
+        <form name="form2">
             <input type="text">
         </form>
-        <form>
+        <form name="form3">
             <input type="text">
         </form>
         <script>
-            const formsEls = document.forms;
+            const formsEls = document.forms[1]; 
+            /*forms[]를 쓰면 다중으로 있는 form들 중에서 배열상 순서에 맞게 가져온다. 
+            혹은 form의 name속성 추가해서 사용*/
             console.log(formsEls);
-
+            console.log(document.form3); /*name속성 사용*/
         </script>
     </body>
 </html>
