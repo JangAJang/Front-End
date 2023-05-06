@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Hello from './component/Hello';
+import Welcome from './component/Welcome';
 
 function App() {
+  const name = "Janghee";
+  const naver = {
+    name: "네이버",
+    url: "http://www.naver.com"
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          이장희 공부 파일
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hello/>
+      <Welcome/>
     </div>
   );
 }
